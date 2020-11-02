@@ -3,7 +3,12 @@ import App from "./App.vue";
 import router from "./router";
 import store from "./store";
 import axios from "axios";
-import "./assets/CSS/global.less";
+import "@/less/reset.less";
+import "@/less/_variable.less";
+import "@/less/index.less";
+
+// import less from "less";
+// Vue.use(less);
 
 // 挂载Echarts
 Vue.prototype.$echarts = window.echarts;
