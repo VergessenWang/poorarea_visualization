@@ -1,5 +1,5 @@
 <template>
-  <div>chinamap</div>
+  <div>barchart</div>
 </template>
 
 <script>

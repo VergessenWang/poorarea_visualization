@@ -1,5 +1,5 @@
 <template>
-  <div>chinamap</div>
+  <div>carousel</div>
 </template>
 
 <script>

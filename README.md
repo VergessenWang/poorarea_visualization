@@ -4,6 +4,35 @@
 
 ### 开发日记
 
+#### 2020.11.03
+
+根据初步的设计比例实现布局及组件注册。宽高全部采用百分比控制。
+
+下一步要考虑字体，边距等的自适应问题，因为 echarts 中的一些字体可能是 px 单位的，缩放的时候会存在问题。
+
+看看有没有根据宽高自动调整 rem 的方法。然后在 echarts 中用 rem 来设置大小
+
+---
+
+#### 2020.11.02
+
+重新配置全局样式。 引入 reset 对样式进行重置，在 index.less 中定义一些常用的样式类， 添加颜色变量以便全局引用
+
+初步构思了一下几个模块的大致布局比例和内容。
+
+另外感觉这方面的数据不是很容易得到，先用静态数据
+
+今日 bug
+
+> Module build failed (from ./node_modules/less-loader/dist/cjs.js)
+
+首先检查 package.json 查看版本：
+`"less": "^3.0.4"` `"less-loader": "^5.0.0"`
+
+试了[好几个解决方案](https://www.cnblogs.com/ajaemp/p/12024106.html)，都不行。 直接在 index.less 中导入变量文件引入算了
+
+---
+
 #### 2020.10.29
 
 项目基本框架的搭建。
@@ -25,25 +54,8 @@ index.html 文件中通过 script 标签引入 echarts, 此时用 window.echarts
 
 今日 bug
 
-> Prettier 总是提示 warning 强迫症很难受，下次我一定不用它来格式化了
+> Prettier 总是提示 warning
 
 解决方法：
 
 1. `npm run lint --fix` 可以每次 commit 之前用一下
-
-#### 2020.11.02
-
-重新配置全局样式。 引入 reset 对样式进行重置，在 index.less 中定义一些常用的样式类， 添加颜色变量以便全局引用
-
-初步构思了一下几个模块的大致布局比例和内容。
-
-另外感觉这方面的数据不是很容易得到，先用静态数据
-
-今日 bug
-
-> Module build failed (from ./node_modules/less-loader/dist/cjs.js)
-
-首先检查 package.json 查看版本：
-`"less": "^3.0.4"` `"less-loader": "^5.0.0"`
-
-试了[好几个解决方案](https://www.cnblogs.com/ajaemp/p/12024106.html)，都不行，算了先不用全局变量，之后换 sass 吧

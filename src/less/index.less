@@ -1,10 +1,28 @@
+@import "./_variable.less";
+
 // 常用公共样式
 body {
-  //   background-color: @body-bg;
+  background-color: @body-bg;
 }
 
 .border {
   border: 2px solid rgba(190, 190, 190, 0.788);
+}
+
+.border-red {
+  border: 2px solid red;
+}
+
+.border-blue {
+  border: 2px solid blue;
+}
+
+.border-green {
+  border: 2px solid green;
+}
+
+.border-yellow {
+  border: 2px solid yellow;
 }
 
 // 鼠标样式
@@ -12,12 +30,46 @@ body {
   cursor: pointer;
 }
 
+// 弹性布局
+.d-flex {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+
+.flex-column {
+  -webkit-box-orient: vertical !important;
+  -webkit-box-direction: normal !important;
+  -ms-flex-direction: column !important;
+  flex-direction: column !important;
+}
+
+.justify-content-center {
+  -webkit-box-pack: center !important;
+  -ms-flex-pack: center !important;
+  justify-content: center !important;
+}
+
+.justify-content-between {
+  -webkit-box-pack: justify !important;
+  -ms-flex-pack: justify !important;
+  justify-content: space-between !important;
+}
+
 .f14 {
   font-size: 14px;
 }
 
+.h-7 {
+  height: 7% !important;
+}
+
 .h-10 {
   height: 10% !important;
+}
+
+.h-30 {
+  height: 30% !important;
 }
 
 .h-40 {
@@ -26,6 +78,10 @@ body {
 
 .h-50 {
   height: 50% !important;
+}
+
+.h-53 {
+  height: 53% !important;
 }
 
 .h-100 {
@@ -42,6 +98,18 @@ body {
 
 .w-40 {
   width: 40% !important;
+}
+
+.w-50 {
+  width: 50% !important;
+}
+
+.w-60 {
+  width: 60% !important;
+}
+
+.w-80 {
+  width: 80% !important;
 }
 
 .w-100 {
